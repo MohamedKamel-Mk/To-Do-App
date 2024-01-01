@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@4/dark.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>To-Do App</title>
+</head>
+<body class="bg-light">
+    <div class="d-flex justify-content-between px-3 w-100">
+        <h1 class="p-3 fw-bolder fs-2 mb-3">
+            <i class="fa-sharp fa-solid fa-circle-check"> To-<span class="text-success">Do</span> App</i>
+        </h1>
+        <input type="text" class="d-block my-3 p-1 m-5 form-control w-25" id="search-input" placeholder="Search By Content" oninput="searchByContent(this.value)"/>
+    </div>
+    <div class="mx-auto w-75 mb-5">
+        <input type="text" class="form-control d-block my-3" placeholder="Type of todo" id="todo-input-type"/>
+        <input type="text" class="form-control d-block my-3" placeholder="I will do ..." id="todo-input-do"/>
+        <div id="message"></div>
+        <button class="btn btn-success d-block" id="submit-button" onclick="addTodo()">Submit</button>
+        <button class="btn btn-warning d-none" id="update-button" onclick="updateTodo()">Update Todo</button>
+    </div>
+    <div>
+        <div class="w-75 mx-auto">
+            <div class="bg-white my-5" id="todo-container">
+            </div>
+        </div>
+    </div>
+    <script src="js/main.js"></script>
+</body>
+</html>
